@@ -13,7 +13,7 @@
 
 	<parent>
 		<groupId>com.hks.rpc</groupId>
-		<artifactId>spring-dubbo-thrift</artifactId>
+		<artifactId>spring-dubbo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
