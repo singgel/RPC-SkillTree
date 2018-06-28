@@ -1,2 +1,2 @@
-# spring-dubbo
-RPC远程过程调用
+# DubboDemo
+干净的springboot-dubbo
