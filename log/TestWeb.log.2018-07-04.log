@@ -1,0 +1,449 @@
+2018-07-04 18:15:49.600 [main] INFO  com.example.dubbo.DubboProviderApplication - Starting DubboProviderApplication on YichedeMacBook-Pro-7.local with PID 6001 (/Users/yiche/github/dubboDemo/dubbo-provider/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:15:49.605 [main] INFO  com.example.dubbo.DubboProviderApplication - The following profiles are active: dubbo
+2018-07-04 18:15:51.118 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.provider
+2018-07-04 18:15:52.735 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:15:52.885 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:15:53.021 [main] INFO  com.example.dubbo.DubboProviderApplication - Started DubboProviderApplication in 4.49 seconds (JVM running for 6.355)
+2018-07-04 18:15:53.023 [main] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者启动完毕------>>启动完毕
+2018-07-04 18:16:16.003 [main] INFO  com.example.dubbo.DubboConsumerApplication - Starting DubboConsumerApplication on YichedeMacBook-Pro-7.local with PID 6003 (/Users/yiche/github/dubboDemo/dubbo-consumer/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:16:16.037 [main] INFO  com.example.dubbo.DubboConsumerApplication - The following profiles are active: dubbo
+2018-07-04 18:16:17.220 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.consumer
+2018-07-04 18:16:18.013 [ZkClient-EventThread-18-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:16:18.109 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:16:18.545 [main] WARN  com.alibaba.dubbo.config.model.ApplicationModel -  [DUBBO] Already register the same consumer:com.example.dubbo.service.MathService, dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:16:19.010 [main] INFO  com.example.dubbo.DubboConsumerApplication - Started DubboConsumerApplication in 4.537 seconds (JVM running for 7.4)
+2018-07-04 18:16:19.013 [main] INFO  com.example.dubbo.DubboConsumerApplication - 服务消费者启动完毕------>>启动完毕
+2018-07-04 18:16:19.029 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:16:19.029 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:16:19.029 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:16:19.388 [DubboServerHandler-192.168.28.56:53666-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:16:19.389 [DubboServerHandler-192.168.28.56:53666-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:16:19.389 [DubboServerHandler-192.168.28.56:53666-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:16:19.413 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:16:19.414 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:16:19.414 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:16:19.426 [DubboServerHandler-192.168.28.56:53666-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:16:19.426 [DubboServerHandler-192.168.28.56:53666-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:16:19.427 [DubboServerHandler-192.168.28.56:53666-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:16:19.433 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:16:19.433 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:16:19.433 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:16:19.435 [DubboServerHandler-192.168.28.56:53666-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:16:19.436 [DubboServerHandler-192.168.28.56:53666-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:16:19.436 [DubboServerHandler-192.168.28.56:53666-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:16:19.437 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:16:19.438 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:16:19.438 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:16:19.440 [DubboServerHandler-192.168.28.56:53666-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:16:19.440 [DubboServerHandler-192.168.28.56:53666-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:16:19.441 [DubboServerHandler-192.168.28.56:53666-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:16:19.475 [Thread-4] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:16:19.481 [ZkClient-EventThread-18-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:16:29.494 [New I/O server worker #1-1] WARN  c.alibaba.dubbo.remoting.transport.AbstractServer -  [DUBBO] All clients has discontected from /192.168.28.56:53666. You can graceful shutdown now., dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:16:47.588 [Thread-4] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者关闭------>>服务关闭
+2018-07-04 18:16:47.590 [Thread-4] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:16:47.593 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:17:17.124 [main] INFO  com.example.dubbo.DubboProviderApplication - Starting DubboProviderApplication on YichedeMacBook-Pro-7.local with PID 6016 (/Users/yiche/github/dubboDemo/dubbo-provider/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:17:17.129 [main] INFO  com.example.dubbo.DubboProviderApplication - The following profiles are active: dubbo
+2018-07-04 18:17:18.195 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.provider
+2018-07-04 18:17:19.518 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:17:19.607 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:17:19.683 [main] INFO  com.example.dubbo.DubboProviderApplication - Started DubboProviderApplication in 4.075 seconds (JVM running for 5.393)
+2018-07-04 18:17:19.685 [main] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者启动完毕------>>启动完毕
+2018-07-04 18:17:29.525 [main] INFO  com.example.dubbo.DubboConsumerApplication - Starting DubboConsumerApplication on YichedeMacBook-Pro-7.local with PID 6018 (/Users/yiche/github/dubboDemo/dubbo-consumer/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:17:29.535 [main] INFO  com.example.dubbo.DubboConsumerApplication - The following profiles are active: dubbo
+2018-07-04 18:17:31.019 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.consumer
+2018-07-04 18:17:31.802 [ZkClient-EventThread-18-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:17:31.901 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:17:32.150 [ZkClient-EventThread-25-127.0.0.1:92181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:17:32.155 [DubboFutureCallbackDefault-thread-1] ERROR c.a.d.remoting.zookeeper.zkclient.ZkClientWrapper -  [DUBBO] Got an exception when trying to create zkclient instance, can not connect to zookeeper server, please check!, dubbo version: 2.0.1, current host: 192.168.28.56
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:92181
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper$2.run(ZkClientWrapper.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:92181
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.createUnresolved(InetSocketAddress.java:254)
+	at org.apache.zookeeper.client.ConnectStringParser.<init>(ConnectStringParser.java:76)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:375)
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:67)
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1116)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:147)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:122)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:118)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:81)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper$1.call(ZkClientWrapper.java:55)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper$1.call(ZkClientWrapper.java:52)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	... 1 common frames omitted
+2018-07-04 18:17:32.155 [main] ERROR c.a.d.remoting.zookeeper.zkclient.ZkClientWrapper -  [DUBBO] Timeout! zookeeper server can not be connected in : 30000ms!, dubbo version: 2.0.1, current host: 192.168.28.56
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:92181
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:206)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.start(ZkClientWrapper.java:67)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.<init>(ZkclientZookeeperClient.java:55)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperTransporter.connect(ZkclientZookeeperTransporter.java:26)
+	at com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter$Adaptive.connect(ZookeeperTransporter$Adaptive.java)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.<init>(ZookeeperRegistry.java:69)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory.createRegistry(ZookeeperRegistryFactory.java:37)
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.getRegistry(AbstractRegistryFactory.java:95)
+	at com.alibaba.dubbo.registry.RegistryFactory$Adaptive.getRegistry(RegistryFactory$Adaptive.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:269)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:98)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:63)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:399)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.buildReferenceBean(InjectAnnotationBeanPostProcessor.java:339)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.access$400(InjectAnnotationBeanPostProcessor.java:41)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor$ReferenceFieldElement.inject(InjectAnnotationBeanPostProcessor.java:310)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.postProcessPropertyValues(InjectAnnotationBeanPostProcessor.java:73)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.dubbo.DubboConsumerApplication.main(DubboConsumerApplication.java:15)
+Caused by: java.lang.IllegalArgumentException: port out of range:92181
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.createUnresolved(InetSocketAddress.java:254)
+	at org.apache.zookeeper.client.ConnectStringParser.<init>(ConnectStringParser.java:76)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:375)
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:67)
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:1116)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:147)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:122)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:118)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:81)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper$1.call(ZkClientWrapper.java:55)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper$1.call(ZkClientWrapper.java:52)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-04 18:17:32.159 [main] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619, waiting for retry, cause: Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doRegister(ZookeeperRegistry.java:112)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:130)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doRefer(RegistryProtocol.java:299)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:283)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:98)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:63)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:399)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.buildReferenceBean(InjectAnnotationBeanPostProcessor.java:339)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.access$400(InjectAnnotationBeanPostProcessor.java:41)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor$ReferenceFieldElement.inject(InjectAnnotationBeanPostProcessor.java:310)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.postProcessPropertyValues(InjectAnnotationBeanPostProcessor.java:73)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.dubbo.DubboConsumerApplication.main(DubboConsumerApplication.java:15)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.createPersistent(ZkClientWrapper.java:98)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.createPersistent(ZkclientZookeeperClient.java:61)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:63)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doRegister(ZookeeperRegistry.java:110)
+	... 31 common frames omitted
+2018-07-04 18:17:32.161 [main] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619, waiting for retry, cause: Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doSubscribe(ZookeeperRegistry.java:185)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.subscribe(FailbackRegistry.java:189)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.subscribe(RegistryDirectory.java:159)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doRefer(RegistryProtocol.java:302)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:283)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:98)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:63)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:399)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.buildReferenceBean(InjectAnnotationBeanPostProcessor.java:339)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.access$400(InjectAnnotationBeanPostProcessor.java:41)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor$ReferenceFieldElement.inject(InjectAnnotationBeanPostProcessor.java:310)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.InjectAnnotationBeanPostProcessor.postProcessPropertyValues(InjectAnnotationBeanPostProcessor.java:73)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.dubbo.DubboConsumerApplication.main(DubboConsumerApplication.java:15)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.createPersistent(ZkClientWrapper.java:98)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.createPersistent(ZkclientZookeeperClient.java:61)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:63)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doSubscribe(ZookeeperRegistry.java:176)
+	... 32 common frames omitted
+2018-07-04 18:17:32.260 [main] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181, waiting for retry, cause: Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to register consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doRegister(ZookeeperRegistry.java:112)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.register(FailbackRegistry.java:130)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doRefer(RegistryProtocol.java:299)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:283)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:98)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:63)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:399)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.buildReferenceBean(ReferenceAnnotationBeanPostProcessor.java:352)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.access$100(ReferenceAnnotationBeanPostProcessor.java:61)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor$ReferenceFieldElement.inject(ReferenceAnnotationBeanPostProcessor.java:323)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.postProcessPropertyValues(ReferenceAnnotationBeanPostProcessor.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.dubbo.DubboConsumerApplication.main(DubboConsumerApplication.java:15)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.createPersistent(ZkClientWrapper.java:98)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.createPersistent(ZkclientZookeeperClient.java:61)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:63)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doRegister(ZookeeperRegistry.java:110)
+	... 31 common frames omitted
+2018-07-04 18:17:32.262 [main] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181, waiting for retry, cause: Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to subscribe consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=providers,configurators,routers&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doSubscribe(ZookeeperRegistry.java:185)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.subscribe(FailbackRegistry.java:189)
+	at com.alibaba.dubbo.registry.integration.RegistryDirectory.subscribe(RegistryDirectory.java:159)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doRefer(RegistryProtocol.java:302)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:283)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:98)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:63)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:399)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.buildReferenceBean(ReferenceAnnotationBeanPostProcessor.java:352)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.access$100(ReferenceAnnotationBeanPostProcessor.java:61)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor$ReferenceFieldElement.inject(ReferenceAnnotationBeanPostProcessor.java:323)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor.postProcessPropertyValues(ReferenceAnnotationBeanPostProcessor.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.dubbo.DubboConsumerApplication.main(DubboConsumerApplication.java:15)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.createPersistent(ZkClientWrapper.java:98)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.createPersistent(ZkclientZookeeperClient.java:61)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:63)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.create(AbstractZookeeperClient.java:57)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doSubscribe(ZookeeperRegistry.java:176)
+	... 32 common frames omitted
+2018-07-04 18:17:32.263 [main] WARN  com.alibaba.dubbo.config.model.ApplicationModel -  [DUBBO] Already register the same consumer:com.example.dubbo.service.MathService, dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:17:32.834 [main] INFO  com.example.dubbo.DubboConsumerApplication - Started DubboConsumerApplication in 4.832 seconds (JVM running for 6.147)
+2018-07-04 18:17:32.836 [main] INFO  com.example.dubbo.DubboConsumerApplication - 服务消费者启动完毕------>>启动完毕
+2018-07-04 18:17:32.850 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:17:32.850 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:17:32.850 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:17:33.165 [DubboServerHandler-192.168.28.56:53670-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:17:33.166 [DubboServerHandler-192.168.28.56:53670-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:17:33.166 [DubboServerHandler-192.168.28.56:53670-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:17:33.195 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:17:33.195 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:17:33.196 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:17:33.220 [DubboServerHandler-192.168.28.56:53670-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:17:33.221 [DubboServerHandler-192.168.28.56:53670-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:17:33.222 [DubboServerHandler-192.168.28.56:53670-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:17:33.232 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:17:33.232 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:17:33.232 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:17:33.235 [DubboServerHandler-192.168.28.56:53670-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:17:33.235 [DubboServerHandler-192.168.28.56:53670-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:17:33.235 [DubboServerHandler-192.168.28.56:53670-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:17:33.237 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:17:33.238 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:17:33.238 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:17:33.241 [DubboServerHandler-192.168.28.56:53670-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:17:33.241 [DubboServerHandler-192.168.28.56:53670-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:17:33.241 [DubboServerHandler-192.168.28.56:53670-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:17:33.278 [Thread-6] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:17:33.284 [ZkClient-EventThread-18-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:17:33.288 [DubboShutdownHook] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to uregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181, waiting for retry, cause: Failed to unregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to unregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699452181 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doUnregister(ZookeeperRegistry.java:120)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.unregister(FailbackRegistry.java:160)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:450)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.destroy(FailbackRegistry.java:436)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.destroy(ZookeeperRegistry.java:100)
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:71)
+	at com.alibaba.dubbo.config.ProtocolConfig.destroyAll(ProtocolConfig.java:148)
+	at com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:82)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.delete(ZkClientWrapper.java:108)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.delete(ZkclientZookeeperClient.java:75)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doUnregister(ZookeeperRegistry.java:118)
+	... 8 common frames omitted
+2018-07-04 18:17:33.289 [DubboShutdownHook] ERROR c.a.dubbo.registry.zookeeper.ZookeeperRegistry -  [DUBBO] Failed to uregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619, waiting for retry, cause: Failed to unregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+com.alibaba.dubbo.rpc.RpcException: Failed to unregister consumer://192.168.28.56/com.example.dubbo.service.MathService?application=demo-consumer&category=consumers&check=false&default.check=false&default.lazy=true&default.reference.filter=regerConsumerFilter&default.retries=20&default.timeout=1000&dubbo=2.0.1&interface=com.example.dubbo.service.MathService&methods=add,throwThrowable,getUser,toList&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&side=consumer&timestamp=1530699451619 to zookeeper zookeeper://127.0.0.1:92181/com.alibaba.dubbo.registry.RegistryService?application=demo-consumer&client=zkclient&dubbo=2.0.1&interface=com.alibaba.dubbo.registry.RegistryService&pid=6018&qos.accept.foreign.ip=false&qos.enable=false&qos.port=0&timestamp=1530699451672, cause: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doUnregister(ZookeeperRegistry.java:120)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.unregister(FailbackRegistry.java:160)
+	at com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(AbstractRegistry.java:450)
+	at com.alibaba.dubbo.registry.support.FailbackRegistry.destroy(FailbackRegistry.java:436)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.destroy(ZookeeperRegistry.java:100)
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:71)
+	at com.alibaba.dubbo.config.ProtocolConfig.destroyAll(ProtocolConfig.java:148)
+	at com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:82)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.delete(ZkClientWrapper.java:108)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.delete(ZkclientZookeeperClient.java:75)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.doUnregister(ZookeeperRegistry.java:118)
+	... 8 common frames omitted
+2018-07-04 18:17:33.291 [DubboShutdownHook] WARN  c.a.d.r.zookeeper.support.AbstractZookeeperClient -  [DUBBO] Zookeeper is not connected yet!, dubbo version: 2.0.1, current host: 192.168.28.56
+java.lang.IllegalStateException: Zookeeper is not connected yet!
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkClientWrapper.close(ZkClientWrapper.java:123)
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.doClose(ZkclientZookeeperClient.java:101)
+	at com.alibaba.dubbo.remoting.zookeeper.support.AbstractZookeeperClient.close(AbstractZookeeperClient.java:115)
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.destroy(ZookeeperRegistry.java:102)
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(AbstractRegistryFactory.java:71)
+	at com.alibaba.dubbo.config.ProtocolConfig.destroyAll(ProtocolConfig.java:148)
+	at com.alibaba.dubbo.config.AbstractConfig$1.run(AbstractConfig.java:82)
+	at java.lang.Thread.run(Thread.java:748)
+2018-07-04 18:17:43.300 [New I/O server worker #1-1] WARN  c.alibaba.dubbo.remoting.transport.AbstractServer -  [DUBBO] All clients has discontected from /192.168.28.56:53670. You can graceful shutdown now., dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:17:44.291 [Thread-4] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者关闭------>>服务关闭
+2018-07-04 18:17:44.293 [Thread-4] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:17:44.297 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:17:59.160 [main] INFO  com.example.dubbo.DubboProviderApplication - Starting DubboProviderApplication on YichedeMacBook-Pro-7.local with PID 6025 (/Users/yiche/github/dubboDemo/dubbo-provider/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:17:59.189 [main] INFO  com.example.dubbo.DubboProviderApplication - The following profiles are active: dubbo
+2018-07-04 18:18:00.896 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.provider
+2018-07-04 18:18:02.092 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:18:02.211 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:18:02.304 [main] INFO  com.example.dubbo.DubboProviderApplication - Started DubboProviderApplication in 5.513 seconds (JVM running for 6.95)
+2018-07-04 18:18:02.313 [main] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者启动完毕------>>启动完毕
+2018-07-04 18:18:09.377 [Thread-4] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者关闭------>>服务关闭
+2018-07-04 18:18:09.378 [Thread-4] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:18:09.380 [ZkClient-EventThread-20-127.0.0.1:12181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:19:04.082 [main] INFO  com.example.dubbo.DubboProviderApplication - Starting DubboProviderApplication on YichedeMacBook-Pro-7.local with PID 6030 (/Users/yiche/github/dubboDemo/dubbo-provider/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:19:04.093 [main] INFO  com.example.dubbo.DubboProviderApplication - The following profiles are active: dubbo
+2018-07-04 18:19:05.252 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.provider
+2018-07-04 18:19:06.470 [ZkClient-EventThread-20-127.0.0.1:2182] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:19:06.669 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:19:06.832 [main] INFO  com.example.dubbo.DubboProviderApplication - Started DubboProviderApplication in 4.13 seconds (JVM running for 5.452)
+2018-07-04 18:19:06.834 [main] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者启动完毕------>>启动完毕
+2018-07-04 18:19:17.567 [main] INFO  com.example.dubbo.DubboConsumerApplication - Starting DubboConsumerApplication on YichedeMacBook-Pro-7.local with PID 6033 (/Users/yiche/github/dubboDemo/dubbo-consumer/target/classes started by yiche in /Users/yiche/github/dubboDemo)
+2018-07-04 18:19:17.574 [main] INFO  com.example.dubbo.DubboConsumerApplication - The following profiles are active: dubbo
+2018-07-04 18:19:19.005 [main] INFO  com.reger.dubbo.config.DubboAutoConfiguration - dubbo开始扫描: com.example.dubbo.consumer
+2018-07-04 18:19:19.588 [ZkClient-EventThread-18-127.0.0.1:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:19:19.703 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:19:20.011 [ZkClient-EventThread-25-127.0.0.1:2182] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:19:20.030 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:19:20.092 [ZkClient-EventThread-31-127.0.0.1:2183] INFO  org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+2018-07-04 18:19:20.153 [DubboZkclientConnector-EventThread] INFO  org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+2018-07-04 18:19:20.666 [main] WARN  com.alibaba.dubbo.config.model.ApplicationModel -  [DUBBO] Already register the same consumer:com.example.dubbo.service.MathService, dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:19:21.147 [main] INFO  com.example.dubbo.DubboConsumerApplication - Started DubboConsumerApplication in 4.947 seconds (JVM running for 6.305)
+2018-07-04 18:19:21.150 [main] INFO  com.example.dubbo.DubboConsumerApplication - 服务消费者启动完毕------>>启动完毕
+2018-07-04 18:19:21.162 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:19:21.162 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:19:21.162 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.add
+2018-07-04 18:19:21.534 [DubboServerHandler-192.168.28.56:53636-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:19:21.534 [DubboServerHandler-192.168.28.56:53636-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:19:21.534 [DubboServerHandler-192.168.28.56:53636-thread-2] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.add被调用 
+2018-07-04 18:19:21.561 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:19:21.562 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:19:21.562 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.toList
+2018-07-04 18:19:21.579 [DubboServerHandler-192.168.28.56:53636-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:19:21.580 [DubboServerHandler-192.168.28.56:53636-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:19:21.580 [DubboServerHandler-192.168.28.56:53636-thread-3] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.toList被调用 
+2018-07-04 18:19:21.589 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:19:21.589 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:19:21.589 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.getUser
+2018-07-04 18:19:21.592 [DubboServerHandler-192.168.28.56:53636-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:19:21.592 [DubboServerHandler-192.168.28.56:53636-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:19:21.592 [DubboServerHandler-192.168.28.56:53636-thread-4] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.getUser被调用 
+2018-07-04 18:19:21.594 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 1.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:19:21.594 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 2.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:19:21.594 [main] INFO  com.example.dubbo.consumer.ConsumerFilterConfig - 3.调用接口 ------》》interface com.example.dubbo.service.MathService.throwThrowable
+2018-07-04 18:19:21.597 [DubboServerHandler-192.168.28.56:53636-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 1.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:19:21.597 [DubboServerHandler-192.168.28.56:53636-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 2.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:19:21.597 [DubboServerHandler-192.168.28.56:53636-thread-5] INFO  com.example.dubbo.provider.ProviderFilterConfig - 3.方法interface com.example.dubbo.service.MathService.throwThrowable被调用 
+2018-07-04 18:19:21.630 [Thread-8] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:19:21.651 [ZkClient-EventThread-31-127.0.0.1:2183] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:19:21.674 [ZkClient-EventThread-25-127.0.0.1:2182] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:19:21.702 [ZkClient-EventThread-18-127.0.0.1:2181] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+2018-07-04 18:19:31.722 [New I/O server worker #1-1] WARN  c.alibaba.dubbo.remoting.transport.AbstractServer -  [DUBBO] All clients has discontected from /192.168.28.56:53636. You can graceful shutdown now., dubbo version: 2.0.1, current host: 192.168.28.56
+2018-07-04 18:20:15.565 [Thread-4] INFO  com.example.dubbo.DubboProviderApplication - 服务提供者关闭------>>服务关闭
+2018-07-04 18:20:15.566 [Thread-4] INFO  com.reger.dubbo.config.AnnotationBean - dubbo开始关闭....
+2018-07-04 18:20:15.584 [ZkClient-EventThread-20-127.0.0.1:2182] INFO  org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
