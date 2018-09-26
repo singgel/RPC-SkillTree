@@ -21,8 +21,10 @@ public class DubboProviderApplication implements CommandLineRunner, DisposableBe
 	private static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) throws InterruptedException {
-		Utils.register(TestRuntimeException.class); // 注册允许传递的异常类型
-		Utils.register(RuntimeException.class); // 注册允许传递的异常类型
+		// 注册允许传递的异常类型
+		Utils.register(TestRuntimeException.class);
+		// 注册允许传递的异常类型
+		Utils.register(RuntimeException.class);
 		context = SpringApplication.run(DubboProviderApplication.class, args);
 		latch.await();
 	}
