@@ -12,6 +12,7 @@
 	<description>rpc project for Spring Boot</description>
 	<modules>
 		<module>google-protocol-buffer</module>
+		<module>google-snappy</module>
 
 		<module>dubbo-api</module>
 		<module>dubbo-consumer</module>
