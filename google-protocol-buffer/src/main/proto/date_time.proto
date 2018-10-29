@@ -1,0 +1,6 @@
+syntax = "proto3";
+package com.hks.googleprotocolbuffer.protobuf;
+option java_outer_classname = "DateTimeBuilder";
+message DateTime {
+    int32 id = 1;
+}
