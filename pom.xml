@@ -4,14 +4,22 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.hks.rpc</groupId>
-	<artifactId>DubboDemo</artifactId>
+	<artifactId>Java-RPC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>spring-dubbo</name>
 	<description>rpc project for Spring Boot</description>
 	<modules>
+		<module>google-protocol-buffer</module>
+
 		<module>dubbo-api</module>
+		<module>dubbo-consumer</module>
+		<module>dubbo-provider</module>
+
+		<module>thrift-api</module>
+		<module>thrift-client</module>
+		<module>thrift-server</module>
 	</modules>
 
 	<parent>
