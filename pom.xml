@@ -4,13 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.hks.rpc</groupId>
-	<artifactId>Java-RPC</artifactId>
+	<artifactId>RPC-SkillTree</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>spring-dubbo</name>
+	<name>SkillTree</name>
 	<description>rpc project for Spring Boot</description>
 	<modules>
+		<module>spring-zookeeper</module>
+		<module>spring-zookeeper-web</module>
+
 		<module>google-protocol-buffer</module>
 		<module>google-snappy</module>
 
