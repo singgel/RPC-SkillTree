@@ -17,7 +17,7 @@ public class ZookeeperRead {
     @RequestMapping(method = RequestMethod.GET, path = "/read")
     @ResponseBody
     public String hello() {
-        ServiceHelp serviceHelp = new ServiceHelpImpl("192.168.70.3:2181");
+        ServiceHelp serviceHelp = new ServiceHelpImpl("127.0.0.1:2181");
         String data = serviceHelp.getData("HelloService");
         return data;
     }
