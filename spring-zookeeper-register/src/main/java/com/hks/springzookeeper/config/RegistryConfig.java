@@ -2,6 +2,7 @@ package com.hks.springzookeeper.config;
 
 import com.hks.springzookeeper.register.ServiceRegistry;
 import com.hks.springzookeeper.register.impl.ServiceRegistryImpl;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix="registry")
 public class RegistryConfig {
 
+    @Value("registry.servers")
     private String servers;
 
     @Bean
