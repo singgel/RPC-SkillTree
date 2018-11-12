@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.hks</groupId>
-	<artifactId>spring-zookeeper-web</artifactId>
+	<artifactId>spring-zookeeper-invoker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-zookeeper-web</name>
-	<description>spring-zookeeper-web project for Spring Boot</description>
+	<name>spring-zookeeper-invoker</name>
+	<description>spring-zookeeper-invoker project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

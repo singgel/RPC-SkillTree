@@ -72,7 +72,17 @@ public class ServiceHelpImpl implements Watcher, ServiceHelp {
     @Override
     public void process(WatchedEvent watchedEvent) {
         if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
-            latch.countDown();
+            if (Event.EventType.None == watchedEvent.getType() && null == watchedEvent.getPath()) {
+                latch.countDown();
+            }
+            else if(watchedEvent.getType()== Event.EventType.NodeChildrenChanged){
+                try{
+                    System.out.print("reGet child:"+zk.getChildren(watchedEvent.getPath(),true));
+                }
+                catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 }
