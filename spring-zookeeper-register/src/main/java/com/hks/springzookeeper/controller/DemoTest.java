@@ -13,7 +13,7 @@ public class DemoTest {
 
     @RequestMapping(name = "HelloService", method = RequestMethod.GET, path = "/hello")
     public String hello() {
-        return "hello";
+        return "hello word";
     }
 
 }
