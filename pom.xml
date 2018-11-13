@@ -11,9 +11,6 @@
 	<name>SkillTree</name>
 	<description>rpc project for Spring Boot</description>
 	<modules>
-		<module>spring-zookeeper</module>
-		<module>spring-zookeeper-web</module>
-
 		<module>google-protocol-buffer</module>
 		<module>google-snappy</module>
 
