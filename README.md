@@ -5,3 +5,5 @@
 
 干净的google-protocol-buffer
 
+关于原理的讲解：https://blog.csdn.net/singgel/article/category/8277371
+
