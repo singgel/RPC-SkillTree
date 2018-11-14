@@ -1,7 +1,9 @@
 package com.hks.springthriftcommon.thrift;
 
+import com.hks.springthriftcommon.exception.ThriftException;
 import com.hks.springthriftcommon.zookeeper.ThriftServerAddressRegister;
 import com.hks.springthriftcommon.zookeeper.ThriftServerIpResolve;
+import com.hks.springthriftcommon.zookeeper.impl.ThriftServerIpLocalNetworkResolve;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.TProcessorFactory;
 import org.apache.thrift.protocol.TBinaryProtocol;
@@ -10,6 +12,9 @@ import org.apache.thrift.server.TThreadedSelectorServer;
 import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TNonblockingServerSocket;
 import org.springframework.beans.factory.InitializingBean;
+
+import java.lang.instrument.IllegalClassFormatException;
+import java.lang.reflect.Constructor;
 
 /**
  * @Author: hekuangsheng
@@ -34,9 +39,79 @@ public class ThriftServiceServerFactory implements InitializingBean {
 
     private ServerThread serverThread;
 
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public void setService(Object service) {
+        this.service = service;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setThriftServerAddressRegister(ThriftServerAddressRegister thriftServerAddressRegister) {
+        this.thriftServerAddressRegister = thriftServerAddressRegister;
+    }
+
+    /**
+     * 初始化方法
+     * @throws Exception
+     */
     @Override
     public void afterPropertiesSet() throws Exception {
-
+        if (thriftServerIpResolve == null) {
+            thriftServerIpResolve = new ThriftServerIpLocalNetworkResolve();
+        }
+        String serverIP = thriftServerIpResolve.getServerIp();
+        if (serverIP == null || serverIP.equals("")) {
+            throw new ThriftException("cant find rpc ip...");
+        }
+        String hostname = serverIP + ":" + port + ":" + weight;
+        Class<?> serviceClass = service.getClass();
+        //获取实现类接口
+        Class<?>[] interfaces = serviceClass.getInterfaces();
+        if (interfaces.length == 0) {
+            throw new IllegalClassFormatException("api-class should implements Iface");
+        }
+        //reflect,load "Processor";
+        TProcessor processor = null;
+        String serviceName = null;
+        for (Class<?> clazz : interfaces) {
+            String cname = clazz.getSimpleName();
+            if (!cname.equals("Iface")) {
+                continue;
+            }
+            serviceName = clazz.getEnclosingClass().getName();
+            String pname = serviceName + "$Processor";
+            try {
+                ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+                Class<?> pclass = classLoader.loadClass(pname);
+                if (!TProcessor.class.isAssignableFrom(pclass)) {
+                    continue;
+                }
+                Constructor<?> constructor = pclass.getConstructor(clazz);
+                processor = (TProcessor) constructor.newInstance(service);
+                break;
+            } catch (Exception e) {
+                //
+            }
+        }
+        if (processor == null) {
+            throw new IllegalClassFormatException("api-class should implements Iface");
+        }
+        //需要单独的线程,因为serve方法是阻塞的.
+        serverThread = new ServerThread(processor, port);
+        serverThread.start();
+        // 注册服务
+        if (thriftServerAddressRegister != null) {
+            thriftServerAddressRegister.register(serviceName, version, hostname);
+        }
     }
 
     class ServerThread extends Thread {
