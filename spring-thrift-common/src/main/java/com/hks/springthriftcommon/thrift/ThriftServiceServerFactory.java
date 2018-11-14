@@ -24,15 +24,15 @@ import java.lang.reflect.Constructor;
  */
 public class ThriftServiceServerFactory implements InitializingBean {
 
-    //服务注册本机端口
+    // 服务注册本机端口
     private Integer port = 8299;
-    //优先级
+    // 优先级
     private Integer weight = 1;
-    //服务实现类
+    // 服务实现类
     private Object service;
-    //服务版本号
+    // 服务版本号
     private String version;
-    //服务注册
+    // 服务注册
     private ThriftServerAddressRegister thriftServerAddressRegister;
     //解析本机IP
     private ThriftServerIpResolve thriftServerIpResolve;
