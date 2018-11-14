@@ -19,6 +19,7 @@ public class HelloWordController {
             HelloWorldService.Iface userBussiness = (HelloWorldService.Iface) ApplicationContextUtil.getBean("thriftServiceClientProxyFactory");
             String str = userBussiness.sayHello("hihao");
             System.out.println(str);
+            return str;
         } catch (Exception e) {
             e.printStackTrace();
         }
