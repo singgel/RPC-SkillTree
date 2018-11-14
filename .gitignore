@@ -25,3 +25,5 @@
 /nbdist/
 /.nb-gradle/
 /logs
+/log
+/data
