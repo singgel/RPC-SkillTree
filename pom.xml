@@ -18,9 +18,24 @@
 		<module>dubbo-consumer</module>
 		<module>dubbo-provider</module>
 
+        <module>grpc-api</module>
+		<module>grpc-consumer</module>
+		<module>grpc-provider</module>
+
 		<module>thrift-api</module>
 		<module>thrift-client</module>
 		<module>thrift-server</module>
+
+		<module>spring-dubbo-api</module>
+		<module>spring-dubbo-consumer</module>
+		<module>spring-dubbo-provider</module>
+
+		<module>spring-thrift-api</module>
+		<module>spring-thrift-client</module>
+		<module>spring-thrift-common</module>
+		<module>spring-thrift-server</module>
+		<module>spring-zookeeper-invoker</module>
+		<module>spring-zookeeper-register</module>
 	</modules>
 
 	<parent>
@@ -51,20 +66,6 @@
 		<spring-boot-starter-dubbo.version>1.1.1</spring-boot-starter-dubbo.version>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.gitee.reger</groupId>
-				<artifactId>example-api</artifactId>
-				<version>${spring-boot-starter-dubbo.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.gitee.reger</groupId>
-				<artifactId>spring-boot-starter-dubbo</artifactId>
-				<version>${spring-boot-starter-dubbo.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<dependencies>
 		<!-- 如果使用dubbo2.6.0，把注释去掉 -->
 		<!-- 		<dependency>
