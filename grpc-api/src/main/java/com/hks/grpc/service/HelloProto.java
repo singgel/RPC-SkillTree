@@ -27,6 +27,24 @@ public final class HelloProto {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>int32 age = 2;</code>
+     */
+    int getAge();
+
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    boolean hasProfitRate();
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    com.google.protobuf.DoubleValue getProfitRate();
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getProfitRateOrBuilder();
   }
   /**
    * Protobuf type {@code hello.HelloRequest}
@@ -72,6 +90,24 @@ public final class HelloProto {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 16: {
+
+              age_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (profitRate_ != null) {
+                subBuilder = profitRate_.toBuilder();
+              }
+              profitRate_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(profitRate_);
+                profitRate_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -140,6 +176,36 @@ public final class HelloProto {
       }
     }
 
+    public static final int AGE_FIELD_NUMBER = 2;
+    private int age_;
+    /**
+     * <code>int32 age = 2;</code>
+     */
+    public int getAge() {
+      return age_;
+    }
+
+    public static final int PROFIT_RATE_FIELD_NUMBER = 3;
+    private com.google.protobuf.DoubleValue profitRate_;
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    public boolean hasProfitRate() {
+      return profitRate_ != null;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    public com.google.protobuf.DoubleValue getProfitRate() {
+      return profitRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : profitRate_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getProfitRateOrBuilder() {
+      return getProfitRate();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -157,6 +223,12 @@ public final class HelloProto {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
+      if (age_ != 0) {
+        output.writeInt32(2, age_);
+      }
+      if (profitRate_ != null) {
+        output.writeMessage(3, getProfitRate());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -168,6 +240,14 @@ public final class HelloProto {
       size = 0;
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (age_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, age_);
+      }
+      if (profitRate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getProfitRate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -186,6 +266,13 @@ public final class HelloProto {
 
       if (!getName()
           .equals(other.getName())) return false;
+      if (getAge()
+          != other.getAge()) return false;
+      if (hasProfitRate() != other.hasProfitRate()) return false;
+      if (hasProfitRate()) {
+        if (!getProfitRate()
+            .equals(other.getProfitRate())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -199,6 +286,12 @@ public final class HelloProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAge();
+      if (hasProfitRate()) {
+        hash = (37 * hash) + PROFIT_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getProfitRate().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -334,6 +427,14 @@ public final class HelloProto {
         super.clear();
         name_ = "";
 
+        age_ = 0;
+
+        if (profitRateBuilder_ == null) {
+          profitRate_ = null;
+        } else {
+          profitRate_ = null;
+          profitRateBuilder_ = null;
+        }
         return this;
       }
 
@@ -361,6 +462,12 @@ public final class HelloProto {
       public com.hks.grpc.service.HelloProto.HelloRequest buildPartial() {
         com.hks.grpc.service.HelloProto.HelloRequest result = new com.hks.grpc.service.HelloProto.HelloRequest(this);
         result.name_ = name_;
+        result.age_ = age_;
+        if (profitRateBuilder_ == null) {
+          result.profitRate_ = profitRate_;
+        } else {
+          result.profitRate_ = profitRateBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -412,6 +519,12 @@ public final class HelloProto {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getAge() != 0) {
+          setAge(other.getAge());
+        }
+        if (other.hasProfitRate()) {
+          mergeProfitRate(other.getProfitRate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -510,6 +623,149 @@ public final class HelloProto {
         onChanged();
         return this;
       }
+
+      private int age_ ;
+      /**
+       * <code>int32 age = 2;</code>
+       */
+      public int getAge() {
+        return age_;
+      }
+      /**
+       * <code>int32 age = 2;</code>
+       */
+      public Builder setAge(int value) {
+        
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 age = 2;</code>
+       */
+      public Builder clearAge() {
+        
+        age_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.DoubleValue profitRate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> profitRateBuilder_;
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public boolean hasProfitRate() {
+        return profitRateBuilder_ != null || profitRate_ != null;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue getProfitRate() {
+        if (profitRateBuilder_ == null) {
+          return profitRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : profitRate_;
+        } else {
+          return profitRateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public Builder setProfitRate(com.google.protobuf.DoubleValue value) {
+        if (profitRateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          profitRate_ = value;
+          onChanged();
+        } else {
+          profitRateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public Builder setProfitRate(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (profitRateBuilder_ == null) {
+          profitRate_ = builderForValue.build();
+          onChanged();
+        } else {
+          profitRateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public Builder mergeProfitRate(com.google.protobuf.DoubleValue value) {
+        if (profitRateBuilder_ == null) {
+          if (profitRate_ != null) {
+            profitRate_ =
+              com.google.protobuf.DoubleValue.newBuilder(profitRate_).mergeFrom(value).buildPartial();
+          } else {
+            profitRate_ = value;
+          }
+          onChanged();
+        } else {
+          profitRateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public Builder clearProfitRate() {
+        if (profitRateBuilder_ == null) {
+          profitRate_ = null;
+          onChanged();
+        } else {
+          profitRate_ = null;
+          profitRateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getProfitRateBuilder() {
+        
+        onChanged();
+        return getProfitRateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getProfitRateOrBuilder() {
+        if (profitRateBuilder_ != null) {
+          return profitRateBuilder_.getMessageOrBuilder();
+        } else {
+          return profitRate_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : profitRate_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue profit_rate = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getProfitRateFieldBuilder() {
+        if (profitRateBuilder_ == null) {
+          profitRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getProfitRate(),
+                  getParentForChildren(),
+                  isClean());
+          profitRate_ = null;
+        }
+        return profitRateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -576,6 +832,13 @@ public final class HelloProto {
      */
     com.google.protobuf.ByteString
         getMessageBytes();
+
+    /**
+     * <code>int32 code = 2;</code>
+     */
+    int getCode();
+
+    public com.hks.grpc.service.HelloProto.HelloReply.HasCodeCase getHasCodeCase();
   }
   /**
    * Protobuf type {@code hello.HelloReply}
@@ -623,6 +886,11 @@ public final class HelloProto {
               message_ = s;
               break;
             }
+            case 16: {
+              hasCodeCase_ = 2;
+              hasCode_ = input.readInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -653,6 +921,42 @@ public final class HelloProto {
       return com.hks.grpc.service.HelloProto.internal_static_hello_HelloReply_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.hks.grpc.service.HelloProto.HelloReply.class, com.hks.grpc.service.HelloProto.HelloReply.Builder.class);
+    }
+
+    private int hasCodeCase_ = 0;
+    private java.lang.Object hasCode_;
+    public enum HasCodeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CODE(2),
+      HASCODE_NOT_SET(0);
+      private final int value;
+      private HasCodeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static HasCodeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static HasCodeCase forNumber(int value) {
+        switch (value) {
+          case 2: return CODE;
+          case 0: return HASCODE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public HasCodeCase
+    getHasCodeCase() {
+      return HasCodeCase.forNumber(
+          hasCodeCase_);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -689,6 +993,17 @@ public final class HelloProto {
       }
     }
 
+    public static final int CODE_FIELD_NUMBER = 2;
+    /**
+     * <code>int32 code = 2;</code>
+     */
+    public int getCode() {
+      if (hasCodeCase_ == 2) {
+        return (java.lang.Integer) hasCode_;
+      }
+      return 0;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -706,6 +1021,10 @@ public final class HelloProto {
       if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
+      if (hasCodeCase_ == 2) {
+        output.writeInt32(
+            2, (int)((java.lang.Integer) hasCode_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -717,6 +1036,11 @@ public final class HelloProto {
       size = 0;
       if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      }
+      if (hasCodeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(
+              2, (int)((java.lang.Integer) hasCode_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -735,6 +1059,15 @@ public final class HelloProto {
 
       if (!getMessage()
           .equals(other.getMessage())) return false;
+      if (!getHasCodeCase().equals(other.getHasCodeCase())) return false;
+      switch (hasCodeCase_) {
+        case 2:
+          if (getCode()
+              != other.getCode()) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -748,6 +1081,14 @@ public final class HelloProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
+      switch (hasCodeCase_) {
+        case 2:
+          hash = (37 * hash) + CODE_FIELD_NUMBER;
+          hash = (53 * hash) + getCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -883,6 +1224,8 @@ public final class HelloProto {
         super.clear();
         message_ = "";
 
+        hasCodeCase_ = 0;
+        hasCode_ = null;
         return this;
       }
 
@@ -910,6 +1253,10 @@ public final class HelloProto {
       public com.hks.grpc.service.HelloProto.HelloReply buildPartial() {
         com.hks.grpc.service.HelloProto.HelloReply result = new com.hks.grpc.service.HelloProto.HelloReply(this);
         result.message_ = message_;
+        if (hasCodeCase_ == 2) {
+          result.hasCode_ = hasCode_;
+        }
+        result.hasCodeCase_ = hasCodeCase_;
         onBuilt();
         return result;
       }
@@ -962,6 +1309,15 @@ public final class HelloProto {
           message_ = other.message_;
           onChanged();
         }
+        switch (other.getHasCodeCase()) {
+          case CODE: {
+            setCode(other.getCode());
+            break;
+          }
+          case HASCODE_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -990,6 +1346,21 @@ public final class HelloProto {
         }
         return this;
       }
+      private int hasCodeCase_ = 0;
+      private java.lang.Object hasCode_;
+      public HasCodeCase
+          getHasCodeCase() {
+        return HasCodeCase.forNumber(
+            hasCodeCase_);
+      }
+
+      public Builder clearHasCode() {
+        hasCodeCase_ = 0;
+        hasCode_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private java.lang.Object message_ = "";
       /**
@@ -1057,6 +1428,36 @@ public final class HelloProto {
         
         message_ = value;
         onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public int getCode() {
+        if (hasCodeCase_ == 2) {
+          return (java.lang.Integer) hasCode_;
+        }
+        return 0;
+      }
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public Builder setCode(int value) {
+        hasCodeCase_ = 2;
+        hasCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 code = 2;</code>
+       */
+      public Builder clearCode() {
+        if (hasCodeCase_ == 2) {
+          hasCodeCase_ = 0;
+          hasCode_ = null;
+          onChanged();
+        }
         return this;
       }
       @java.lang.Override
@@ -1131,11 +1532,14 @@ public final class HelloProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013hello.proto\022\005hello\"\034\n\014HelloRequest\022\014\n\004" +
-      "name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(" +
-      "\t2?\n\007Greeter\0224\n\010SayHello\022\023.hello.HelloRe" +
-      "quest\032\021.hello.HelloReply\"\000B$\n\024com.hks.gr" +
-      "pc.serviceB\nHelloProtoP\000b\006proto3"
+      "\n\013hello.proto\022\005hello\032\036google/protobuf/wr" +
+      "appers.proto\"\\\n\014HelloRequest\022\014\n\004name\030\001 \001" +
+      "(\t\022\013\n\003age\030\002 \001(\005\0221\n\013profit_rate\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValue\"9\n\nHelloReply" +
+      "\022\017\n\007message\030\001 \001(\t\022\016\n\004code\030\002 \001(\005H\000B\n\n\010has" +
+      "_code2?\n\007Greeter\0224\n\010SayHello\022\023.hello.Hel" +
+      "loRequest\032\021.hello.HelloReply\"\000B$\n\024com.hk" +
+      "s.grpc.serviceB\nHelloProtoP\000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1148,19 +1552,21 @@ public final class HelloProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_hello_HelloRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_hello_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hello_HelloRequest_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "Name", "Age", "ProfitRate", });
     internal_static_hello_HelloReply_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_hello_HelloReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hello_HelloReply_descriptor,
-        new java.lang.String[] { "Message", });
+        new java.lang.String[] { "Message", "Code", "HasCode", });
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "google/protobuf/wrappers.proto";
 option java_multiple_files = false;
 option java_package = "com.hks.grpc.service";
 option java_outer_classname = "HelloProto";
@@ -7,13 +8,19 @@ option java_outer_classname = "HelloProto";
 package hello;
 
 service Greeter {
-    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+    }
 }
 
 message HelloRequest {
     string name = 1;
+    int32 age = 2;
+    google.protobuf.DoubleValue profit_rate = 3;
 }
 
 message HelloReply {
     string message = 1;
+    oneof has_code {
+        int32 code = 2;
+    }
 }
