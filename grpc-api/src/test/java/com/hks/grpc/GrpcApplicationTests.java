@@ -1,7 +1,10 @@
 package com.hks.grpc;
 
+import com.baidu.bjf.remoting.protobuf.Codec;
+import com.baidu.bjf.remoting.protobuf.ProtobufProxy;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.DoubleValue;
+import com.hks.grpc.bean.Hellorequest;
 import com.hks.grpc.service.AddressBookProtos.Person;
 import com.hks.grpc.service.HelloProto.HelloRequest;
 import com.hks.grpc.service.HelloProto.HelloReply;
@@ -11,6 +14,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 @RunWith(SpringRunner.class)
@@ -97,5 +101,32 @@ public class GrpcApplicationTests {
         System.out.println(reply.getHasCodeCase());
     }
 
+    @Test
+    public void testJprotobuf(){
+        Codec<Hellorequest> simpleTypeCodec = ProtobufProxy
+                .create(Hellorequest.class);
 
+        HelloRequest hellorequest =
+                HelloRequest.newBuilder()
+                        .setName("john")
+                        .setAge(100)
+                        .setProfitRate(DoubleValue.of(0.0))
+                        .build();
+        /*Hellorequest hellorequest = new Hellorequest();
+        hellorequest.setName("john");
+        hellorequest.setAge(100);
+        hellorequest.setProfit_rate(0.0);*/
+        try {
+            // 序列化
+            byte[] bb = hellorequest.toByteArray();
+//            byte[] bb = simpleTypeCodec.encode(hellorequest);
+            // 反序列化
+            HelloRequest hello = HelloRequest.parseFrom(bb);
+            System.out.println(hello);
+            Hellorequest newHellorequest = simpleTypeCodec.decode(bb);
+            System.out.println(newHellorequest);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
