@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+//生成多文件，可以将类都生成在一个文件中
+option java_multiple_files = true;
+//包名
+option java_package = "com.hks.rpc";
+//生成的类名
+option java_outer_classname = "AddtitionProto";
+//object-c类名前缀避免类名冲突
+//option objc_class_prefix = "NS";
+
+package addition;
+
+// 定义服务
+service AdditionService {
+    // 服务中的方法，传过来一个Value类型的流，返回一个Result类型
+    rpc getResult (stream Value) returns (Result) {}
+}
+//定义Value消息类型，用于客户端消息
+message Value {
+    int32 value = 1;
+}
+//定义Result消息类型，包含总和，数字数量和平均值，用于服务端消息返回
+message Result {
+    int32 sum = 1;
+    int32 cnt = 2;
+    double avg = 3;
+}

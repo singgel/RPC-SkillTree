@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.hks.rpc";
+option java_outer_classname = "NameProto";
+option objc_class_prefix = "NSS";
+
+package nameservers;
+
+// 定义服务
+service NameServers {
+    // 服务中的方法，用于根据Name类型的参数获得一系列ip，以流的方式返回
+    rpc getIpsByName (Name) returns (stream Ip) {}
+}
+//定义Name消息类型，其中name为其序列为1的字段
+message Name {
+    string name = 1;
+}
+//定义Ip消息类型，其中ip为其序列为1的字段
+message Ip {
+    string ip = 1;
+}

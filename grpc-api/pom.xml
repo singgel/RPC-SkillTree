@@ -57,7 +57,16 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>io.protostuff</groupId>
+			<artifactId>protostuff-core</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.protostuff</groupId>
+			<artifactId>protostuff-runtime</artifactId>
+			<version>1.4.0</version>
+		</dependency>
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java &ndash;&gt;
 		<dependency>
 			<groupId>com.google.protobuf</groupId>

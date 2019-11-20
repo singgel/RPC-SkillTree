@@ -36,7 +36,11 @@
 		<module>spring-thrift-server</module>
 		<module>spring-zookeeper-invoker</module>
 		<module>spring-zookeeper-register</module>
-	</modules>
+		<module>spring-grpc-common</module>
+        <module>grpc-stream-client</module>
+        <module>grpc-stream-server</module>
+        <module>grpc-stream-double</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

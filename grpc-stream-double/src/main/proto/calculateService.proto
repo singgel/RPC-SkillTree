@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+//生成多文件，可以将类都生成在一个文件中
+option java_multiple_files = false;
+//包名
+option java_package = "com.hks.rpc";
+//生成的类名
+option java_outer_classname = "CalculateProto";
+
+package calculate;
+
+// 定义服务
+service CalculateService {
+    // 服务中的方法，传过来一个Value类型的流，返回一个Result类型的流信息
+    rpc getResult (stream Value) returns (stream Result) {}
+}
+//定义Value消息类型，用于客户端消息
+message Value {
+    int32 value = 1;
+}
+//定义Result消息类型，包含总和，数字数量和平均值，用于服务端消息返回
+message Result {
+    int32 sum = 1;
+    int32 cnt = 2;
+    double avg = 3;
+}

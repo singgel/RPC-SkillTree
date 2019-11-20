@@ -64,7 +64,9 @@ public class HelloServer {
 
         @Override
         public void sayHello(HelloProto.HelloRequest req, StreamObserver<HelloProto.HelloReply> responseObserver) {
-            HelloProto.HelloReply reply = HelloProto.HelloReply.newBuilder().setMessage("Hello " + req.getName()).build();
+            HelloProto.HelloReply reply = HelloProto.HelloReply.newBuilder()
+                    .setMessage("Hello " + req.getName())
+                    .build();
             // 使用响应监视器的onNext方法返回HelloReply
             responseObserver.onNext(reply);
             // 使用onCompleted方法指定本次调用已经完成

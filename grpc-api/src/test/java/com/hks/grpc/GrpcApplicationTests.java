@@ -4,11 +4,13 @@ import com.baidu.bjf.remoting.protobuf.Codec;
 import com.baidu.bjf.remoting.protobuf.ProtobufProxy;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.DoubleValue;
+import com.hks.grpc.bean.HelloRequestStuff;
 import com.hks.grpc.bean.Hellorequest;
 import com.hks.grpc.service.AddressBookProtos.Person;
 import com.hks.grpc.service.HelloProto.HelloRequest;
 import com.hks.grpc.service.HelloProto.HelloReply;
 import com.hks.grpc.service.HelloRequestJava;
+import com.hks.grpc.util.ProtoBufUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -125,6 +127,8 @@ public class GrpcApplicationTests {
             System.out.println(hello);
             Hellorequest newHellorequest = simpleTypeCodec.decode(bb);
             System.out.println(newHellorequest);
+            HelloRequestStuff request = ProtoBufUtil.deserializer(bb,HelloRequestStuff.class);
+            System.out.println(request);
         } catch (IOException e) {
             e.printStackTrace();
         }
