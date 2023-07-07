@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>io.grpc</groupId>
 			<artifactId>grpc-protobuf</artifactId>
-			<version>RELEASE</version>
+			<version>1.53.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.grpc</groupId>
